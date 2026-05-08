@@ -1,0 +1,83 @@
+.storybook-controller-value-set {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.storybook-controller-value-set__header {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.storybook-controller-value-set__title {
+  padding: var(--spacing-1-5) var(--spacing-0-5);
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  color: var(--ui-sys-text-color-neutral);
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.storybook-controller-value-set__value {
+  padding: var(--spacing-1-5) var(--spacing-1-5) var(--spacing-2) var(--spacing-2);
+  border-radius: var(--rounding-md);
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  color: var(--ui-sys-text-color);
+  line-height: normal;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.storybook-controller-value-set__track {
+  width: 100%;
+  height: 42px;
+  background: var(--ui-sys-div-bg-fill);
+  border-radius: var(--rounding-md);
+  padding: var(--spacing-0-5);
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  cursor: pointer;
+}
+
+.storybook-controller-value-set__fill {
+  height: 100%;
+  background: var(--ui-sys-div-bg-fill-primary);
+  border-radius: var(--rounding-sm);
+  padding: 0 var(--spacing-1);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 8px;
+  transition: width 80ms linear;
+}
+
+.storybook-controller-value-set__holder-frame {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: grab;
+}
+
+.storybook-controller-value-set__holder-frame:active {
+  cursor: grabbing;
+}
+
+.storybook-controller-value-set__holder {
+  width: 2px;
+  height: 15px;
+  border-radius: 999px;
+  background: var(--ui-sys-div-bg-fill-light);
+}
