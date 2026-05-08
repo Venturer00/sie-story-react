@@ -1,0 +1,80 @@
+.storybook-card {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-14);
+    padding: var(--spacing-8);
+    background: var(--ui-container-bg);
+    border-radius: var(--rounding-4xl);
+    border: 1.5px solid var(--ui-container-bg-outline);
+    box-sizing: border-box;
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+    }
+
+.storybook-card:hover {
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.16);
+    transform: translateY( -4px);
+}
+
+.storybook-card__header {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.storybook-card__trail-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+    transform-origin: center;
+    transition: transform 0.7s ease;
+    will-change: transform;
+}
+
+.storybook-card:hover .storybook-card__trail-icon {
+    transform: scale(1.1);
+}
+
+.storybook-card__spacer {
+    flex: 1 0 0;
+    min-width: 1px;
+}
+
+.storybook-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    width: 100%;
+}
+
+.storybook-card__headline {
+    margin: 0;
+    font-family: var(--font-family-headline);
+    font-size: var(--font-size-h2);
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: -1.5px;
+    color: var(--ui-text-color-headline);
+}
+
+.storybook-card__benefits {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+}
+
+.storybook-card__description {
+    margin: 0;
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    line-height: 24px;
+    line-height: 24px;
+    color: var(--ui-text-color-p);
+}
+
+.storybook-card__cta,
+.storybook-card__cta .storybook-button {
+    width: 100%;
+}
