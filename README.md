@@ -13,7 +13,7 @@ Components
 ## STORYBOOK
 
 ```bash
-https://motionart.sk/sie-story-react
+https://motionart.sk/sie-story-react.git
 ```
 <br>
 
