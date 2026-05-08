@@ -1,0 +1,108 @@
+/* src/styles/tokens.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+3:wght@400;600&display=swap');
+
+:root {
+    /* Colors from Figma Variables */
+    --ui-container-bg: #ffffff;
+    --ui-container-bg-outline: #cccccc;
+    --ui-badge-bg-primary: #ec6602;
+    --ui-badge-bg-secondary: #009999;
+    --ui-badge-bg-neutral: #e6e6e6;
+    --ui-button-bg-default: #000000;
+    --ui-text-color-headline: #000000;
+    --ui-text-color-p: #4d4d4d;
+    --ui-text-color-text-inverted: #f2f2f2;
+    --ui-text-color-text: #1a1a1a;
+
+    /* Badge */
+    --ui-badge-bg-filled: #ffffff;
+    --ui-badge-bg-outline: #cccccc;
+
+    /* Button */
+    --ui-button-bg-default: #000000;
+    --ui-button-bg-default-hover: #1a1a1a;
+    --ui-button-bg-neutral: #e6e6e6;
+    --ui-button-bg-neutral-hover: #cccccc;
+    --ui-button-bg-filled-outline: #ffffff;
+    --ui-button-bg-filled-outline-hover: #cccccc;
+    --ui-button-bg-outline: #cccccc;
+
+    /* Icon */
+    --ui-icon-bg-white: #ffffff;
+    --ui-icon-bg-black: #000000;
+
+    /* Font Sizes */
+    --font-size-large: 18px;
+    --font-size-xlarge: 20px;
+    --font-size-medium: 16px;
+    --font-size-small: 14px;
+    --font-size-h2: 39px;
+    --font-weight-normal: 400;
+  
+    /* Spacing from Figma 'Gap' */
+    --spacing-0-5: 2px;
+    --spacing-1: 4px;
+    --spacing-1-5: 6px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-8: 32px;
+    --spacing-10: 40px;
+    --spacing-14: 56px;
+  
+    /* Rounding */
+    --rounding-sm: 4px;
+    --rounding-md: 6px;
+    --rounding-2xl: 16px;
+    --rounding-2-5xl: 18px;
+    --rounding-2-4xl: 24px;
+    --rounding-3xl: 26px;
+    --rounding-3-8xl: 20px;
+    --rounding-4xl: 38px;
+  
+    /* Typography */
+    --font-family-headline: 'Bree Serif', sans-serif;
+    --font-family-text: 'Source Sans 3', sans-serif;
+
+    /* System */
+    --ui-sys-div-bg-fill: #1a1a1a;
+    --ui-sys-div-bg-fill-primary: #ec6602;
+    --ui-sys-div-bg-fill-light: #1a1a1a;
+    --ui-sys-text-color: #000000;
+    --ui-sys-text-color-neutral: #4d4d4d;
+    --ui-sys-container-bg-fill-neutral: #e6e6e6;
+    --ui-sys-border-color: #cccccc;
+    --ui-sys-icon-bg: #000000;
+    --ui-sys-section-bg-fill: #f2f2f2;
+    --ui-sys-container-bg-fill: #f2f2f2;
+    } 
+
+  /* Dark Mode */
+  /* Dark mode overrides (Figma node 10010:537) */
+.dark,
+[data-theme='dark'] {
+  --ui-container-bg: #000000;
+  --ui-container-bg-outline: #e6e6e6;
+  --ui-text-color-headline: #f2f2f2;
+  --ui-text-color-p: #b3b3b3;
+  --ui-button-bg-default: #f2f2f2;
+  --ui-text-color-text-inverted: #1a1a1a;
+  --ui-button-bg-default-hover: #b3b3b3;
+
+  /* System */
+  --ui-sys-div-bg-fill: #000000;
+  --ui-sys-div-bg-fill-primary: #ec6602;
+  --ui-sys-div-bg-fill-light: #000000;
+  --ui-sys-text-color: #f2f2f2;
+  --ui-sys-text-color-neutral: #b3b3b3;
+  --ui-sys-container-bg-fill-neutral: #3d3d3d;
+  --ui-sys-border-color: #444444;
+  --ui-sys-icon-bg: #ffffff;
+  --ui-sys-section-bg-fill: #1A1A1A;
+  --ui-sys-container-bg-fill: #1a1a1a;
+
+
+}

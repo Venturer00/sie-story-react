@@ -1,0 +1,85 @@
+.storybook-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 40px;
+    padding: var(--spacing-3) var(--spacing-5);
+    border-radius: var(--rounding-md);
+    border: none;
+    cursor: pointer;
+    transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.storybook-button__text {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-normal);
+    line-height: 24px;
+    letter-spacing: 0.24px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.storybook-button__text--inverted {
+    color: var(--ui-text-color-text-inverted);
+}
+
+.storybook-button__icon-wrap {
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.storybook-button__icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.storybook-button--variant-default .storybook-button__icon {
+    filter: brightness(0) invert(1);
+}
+
+/* State mapping */
+.storybook-button--variant-default.storybook-button--state-default {
+    background-color: var(--ui-button-bg-default);
+}
+
+.storybook-button--variant-default.storybook-button--state-hover {
+    background-color: var(--ui-button-bg-default-hover);
+}
+
+.storybook-button--variant-neutral.storybook-button--state-default {
+    background-color: var(--ui-button-bg-neutral);
+}
+
+.storybook-button--variant-neutral.storybook-button--state-hover {
+    background-color: var(--ui-button-bg-neutral-hover);
+}
+
+.storybook-button--variant-outline.storybook-button--state-default {
+    background-color: var(--ui-button-bg-filled-outline);
+    border: 1px solid var(--ui-button-bg-outline);
+}
+
+.storybook-button--variant-outline.storybook-button--state-hover {
+    background-color: var(--ui-button-bg-filled-outline-hover);
+    border: 1px solid var(--ui-button-bg-outline);
+}
+
+/* Keep hover rules after state rules so mouse hover wins */
+.storybook-button--variant-default:hover {
+    background-color: var(--ui-button-bg-default-hover);
+}
+
+.storybook-button--variant-neutral:hover {
+    background-color: var(--ui-button-bg-neutral-hover);
+}
+
+.storybook-button--variant-outline:hover {
+    background-color: var(--ui-button-bg-filled-outline-hover);
+    border-color: var(--ui-button-bg-outline);
+}

@@ -1,0 +1,36 @@
+/* src/stories/Badge.css */
+.storybook-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: var(--rounding-md);
+    font-family: var(--font-family-text);
+    font-weight: var(--font-weight-normal);
+    color: var(--ui-text-color-text);
+    transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+/* variant backgrounds */
+.storybook-badge--primary { background-color: var(--ui-badge-bg-primary); }
+.storybook-badge--secondary { background-color: var(--ui-badge-bg-secondary); }
+.storybook-badge--neutral { background-color: var(--ui-badge-bg-neutral); }
+.storybook-badge--outline {
+    background-color: var(--ui-badge-bg-filled);
+    border: 1px solid var(--ui-badge-bg-outline);
+}
+
+/* Sizes */
+.storybook-badge--large { height: 44px; padding: 0 12px; font-size: var(--font-size-large); }
+.storybook-badge--medium { height: 40px; padding: 0 12px; font-size: var(--font-size-medium); }
+.storybook-badge--small { height: 26px; padding: 0 12px; font-size: var(--font-size-small); }
+
+/* Specific Icon Sizes to match Figma */
+.storybook-badge--large .storybook-badge-icon { width: 20px; height: 20px; }
+.storybook-badge--medium .storybook-badge-icon { width: 16px; height: 16px; }
+.storybook-badge--small .storybook-badge-icon { width: 14px; height: 14px; }
+
+.storybook-badge-icon {
+    width: 1em;
+    height: 1em;
+}
