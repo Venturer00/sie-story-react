@@ -1,0 +1,135 @@
+/* src/PropsModalChild.css */
+
+.storybook-props-modal-child {
+  width: 346px;
+}
+
+.storybook-props-modal-child__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--ui-sys-container-bg-fill-neutral);
+  border-radius: var(--rounding-2xl); /* 16px */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Header */
+.storybook-props-modal-child__header {
+  height: 48px;
+  padding: var(--spacing-3); /* 12px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1.4px solid transparent; /* reserve line space to avoid text jump */
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.storybook-props-modal-child__header--open {
+  border-bottom-color: var(--ui-sys-border-color);
+}
+
+.storybook-props-modal-child__title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.storybook-props-modal-child__icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex: 0 0 18px;
+  object-fit: contain;
+}
+
+.storybook-props-modal-child__title {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  color: var(--ui-sys-text-color);
+  line-height: 1; /* stable baseline */
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Chevron */
+.storybook-props-modal-child__chevron-wrap {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 18px; /* lock width during rotation */
+  color: var(--ui-sys-icon-bg);
+  transform: rotate(0deg);
+  transition: transform 240ms ease;
+}
+
+.storybook-props-modal-child__chevron-wrap--open {
+  transform: rotate(180deg);
+}
+
+/* Body */
+.storybook-props-modal-child__body {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition:
+    max-height 280ms ease,
+    opacity 220ms ease,
+    margin-top 240ms ease;
+  will-change: max-height, opacity, margin-top;
+}
+
+.storybook-props-modal-child__body--open {
+  margin-top: var(--spacing-5); /* 20px */
+  max-height: 420px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.storybook-props-modal-child__body--closed {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Control blocks */
+.storybook-props-modal-child__value-set {
+  padding: 0 var(--spacing-3) var(--spacing-3); /* 0 12 12 */
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+.storybook-props-modal-child__value-set .storybook-controller-value-set {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Light mode: make card icon dark */
+.storybook-props-modal-child:not(.dark) .storybook-props-modal-child__icon {
+  filter: brightness(0);
+}
+
+/* Dark mode: keep icon light (original asset) */
+.storybook-props-modal-child.dark .storybook-props-modal-child__icon {
+  filter: none;
+}
