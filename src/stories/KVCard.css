@@ -1,0 +1,92 @@
+.storybook-kv-card {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--rounding-4xl);
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1.5px solid var(--ui-container-bg-outline);
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+  }
+  
+  .storybook-kv-card:hover {
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.16);
+    transform: translateY(-4px);
+  }
+  
+  .storybook-kv-card__image-header {
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 420 / 222;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: var(--spacing-8);
+    box-sizing: border-box;
+  }
+  
+  .storybook-kv-card__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    top: 12px;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+    transform-origin: center;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+    padding: 0; 
+  }
+
+  .storybook-kv-card:hover .storybook-kv-card__image {
+    transform: scale(1.05);
+  }
+  
+  .storybook-kv-card__body {
+    background-color: var(--ui-container-bg);
+    padding: var(--spacing-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .storybook-kv-card__headline {
+    margin: 0;
+    font-family: var(--font-family-headline);
+    font-size: var(--font-size-h2);
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: -1.5px;
+    color: var(--ui-text-color-headline);
+  }
+  
+  .storybook-kv-card__benefits {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-1);
+  }
+  
+  .storybook-kv-card__description {
+    margin: 0;
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--ui-text-color-p);
+  }
+
+  .storybook-kv-card__badge {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .storybook-kv-card__cta,
+  .storybook-kv-card__cta .storybook-button {
+    width: 100%;
+  }
