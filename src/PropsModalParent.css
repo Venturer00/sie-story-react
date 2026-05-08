@@ -1,0 +1,95 @@
+/* src/PropsModalParent.css */
+
+.storybook-props-modal-parent {
+  width: 370px;
+}
+
+.storybook-props-modal-parent__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* no gap — body uses margin-top when open to avoid dead space when closed */
+  background: var(--ui-sys-section-bg-fill);
+  border-radius: var(--rounding-2-4xl); /* 24px */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* base header (open-state/default) */
+.storybook-props-modal-parent__header {
+  width: 100%;
+  padding: var(--spacing-5) var(--spacing-6); /* 20px 24px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--ui-sys-container-bg-fill);
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.storybook-props-modal-parent__title {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-xlarge); /* 20px */
+  font-weight: var(--font-weight-normal);
+  line-height: normal;
+  color: var(--ui-sys-text-color);
+  white-space: nowrap;
+}
+
+/* chevron */
+.storybook-props-modal-parent__chevron-wrap {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 18px;
+  color: var(--ui-sys-icon-bg);
+  transform: rotate(0deg);
+  transition: transform 240ms ease;
+}
+
+.storybook-props-modal-parent__chevron-wrap--open {
+  transform: rotate(180deg);
+}
+
+/* body animation */
+.storybook-props-modal-parent__body {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 0;
+  transition:
+    max-height 320ms ease,
+    opacity 220ms ease,
+    margin-top 240ms ease;
+  will-change: max-height, opacity, margin-top;
+}
+
+.storybook-props-modal-parent__body--open {
+  margin-top: var(--spacing-3); /* 12px gap only when open */
+  max-height: 1200px;
+  opacity: 1;
+}
+
+.storybook-props-modal-parent__body--closed {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.storybook-props-modal-parent__children {
+  padding: var(--spacing-3); /* 12px */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3); /* 12px */
+  box-sizing: border-box;
+}
+
+/* ---------- Closed-state tuning to match Child category look ---------- */
+
+.storybook-props-modal-parent__wrapper--closed {
+  padding-bottom: 0; /* subtle bottom breathing room like child closed */
+}
